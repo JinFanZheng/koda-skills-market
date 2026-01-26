@@ -1,0 +1,63 @@
+{
+  "name": "koda-skills-market",
+  "owner": {
+    "name": "Koda Skills Market",
+    "email": "admin@koda.ai"
+  },
+  "metadata": {
+    "description": "Koda Skills Market - A comprehensive collection of AI skills for daily productivity, travel planning, and data operations",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "travel-skills",
+      "description": "Travel and transportation skills including commuting, flight booking, hotel reservations, rail travel, and itinerary planning",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/commute",
+        "./skills/flight",
+        "./skills/hotel",
+        "./skills/rail",
+        "./skills/itinerary"
+      ]
+    },
+    {
+      "name": "data-skills",
+      "description": "Data processing skills including analysis, database operations, file handling, and visualization",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/data-analysis",
+        "./skills/data-base",
+        "./skills/data-files",
+        "./skills/data-viz"
+      ]
+    },
+    {
+      "name": "daily-life-skills",
+      "description": "Daily life assistance skills including food recommendations, weather information, news retrieval, and email management",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/food",
+        "./skills/weather",
+        "./skills/news",
+        "./skills/email"
+      ]
+    },
+    {
+      "name": "productivity-skills",
+      "description": "Productivity and business skills including knowledge management, memory operations, verification, foreign exchange, and specialized tools",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/knowledge",
+        "./skills/memory",
+        "./skills/verify",
+        "./skills/fx",
+        "./skills/ralph"
+      ]
+    }
+  ]
+}
