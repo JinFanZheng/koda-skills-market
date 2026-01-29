@@ -1,6 +1,14 @@
 ---
 name: environment-installer
-description: Cross-platform development environment installer for Git, Node.js, Python, Go, Java, .NET, Docker, Rust, and other programming languages. Automatically detects platform (macOS/Linux/Windows) and uses appropriate package managers (Homebrew, apt, dnf, winget) and version managers (nvm, pyenv, sdkman). Use when user needs to: (1) Install a programming language runtime, (2) Set up development environment, (3) Manage multiple language versions, (4) Install containerization tools (Docker), (5) Install version control (Git), (6) Verify installation, (7) Get platform-specific installation instructions, or (8) Uninstall development environments.
+description: >-
+  Cross-platform development environment installer for Git, Node.js, Python, Go, Java,
+  .NET, Docker, Rust, and other programming languages. Automatically detects platform
+  (macOS/Linux/Windows) and uses appropriate package managers (Homebrew, apt, dnf, winget)
+  and version managers (nvm, pyenv, sdkman). Use when user needs to: (1) Install a
+  programming language runtime, (2) Set up development environment, (3) Manage multiple
+  language versions, (4) Install containerization tools (Docker), (5) Install version
+  control (Git), (6) Verify installation, (7) Get platform-specific installation
+  instructions, or (8) Uninstall development environments.
 ---
 
 # Environment Installer
