@@ -1,8 +1,8 @@
 {
   "name": "koda-skills-market",
   "owner": {
-    "name": "Koda Skills Market",
-    "email": "admin@koda.ai"
+    "name": "VanZheng",
+    "email": "zheng_jinfan@126.com"
   },
   "metadata": {
     "description": "Koda Skills Market - A comprehensive collection of AI skills for daily productivity, travel planning, and data operations",
@@ -56,7 +56,8 @@
         "./skills/memory",
         "./skills/verify",
         "./skills/fx",
-        "./skills/ralph"
+        "./skills/ralph",
+        "./skills/environment-installer"
       ]
     }
   ]
