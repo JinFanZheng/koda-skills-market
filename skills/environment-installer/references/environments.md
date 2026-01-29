@@ -291,6 +291,32 @@ If commands aren't found after installation:
 
 ## Uninstalling Environments
 
+### Git
+
+**macOS**:
+```bash
+brew uninstall git
+```
+
+**Linux**:
+```bash
+sudo apt remove git          # Debian/Ubuntu
+sudo yum remove git          # Red Hat/CentOS
+sudo pacman -R git           # Arch Linux
+```
+
+**Windows**:
+```powershell
+winget uninstall Git.Git
+# Or uninstall from Control Panel
+```
+
+**Remove Git configuration** (optional):
+```bash
+rm -rf ~/.gitconfig
+rm -rf ~/.gitignore_global
+```
+
 ### Node.js
 
 **macOS/Linux (with nvm)**:
@@ -453,6 +479,8 @@ Edit your shell configuration file and remove lines related to:
 After uninstalling, verify the tool is no longer available:
 
 ```bash
+which node    # Should return "not found"
+which git      # Should return "not found"
 which node    # Should return "not found"
 which python  # Should return "not found"
 which go      # Should return "not found"

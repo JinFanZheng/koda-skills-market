@@ -1,6 +1,6 @@
 ---
 name: environment-installer
-description: Cross-platform development environment installer for Node.js, Python, Go, Java, .NET, Docker, Rust, and other programming languages. Automatically detects platform (macOS/Linux/Windows) and uses appropriate package managers (Homebrew, apt, dnf, winget) and version managers (nvm, pyenv, sdkman). Use when user needs to: (1) Install a programming language runtime, (2) Set up development environment, (3) Manage multiple language versions, (4) Install containerization tools (Docker), (5) Verify installation, (6) Get platform-specific installation instructions, or (7) Uninstall development environments.
+description: Cross-platform development environment installer for Git, Node.js, Python, Go, Java, .NET, Docker, Rust, and other programming languages. Automatically detects platform (macOS/Linux/Windows) and uses appropriate package managers (Homebrew, apt, dnf, winget) and version managers (nvm, pyenv, sdkman). Use when user needs to: (1) Install a programming language runtime, (2) Set up development environment, (3) Manage multiple language versions, (4) Install containerization tools (Docker), (5) Install version control (Git), (6) Verify installation, (7) Get platform-specific installation instructions, or (8) Uninstall development environments.
 ---
 
 # Environment Installer
@@ -17,6 +17,7 @@ The skill automatically detects your platform and uses the appropriate installer
 ```bash
 # Auto-detect platform and install
 PLATFORM=$(scripts/detect_platform.sh)
+scripts/install_git.sh $PLATFORM
 scripts/install_nodejs.sh $PLATFORM lts
 scripts/install_python.sh $PLATFORM 3.12
 scripts/install_golang.sh $PLATFORM latest
@@ -28,6 +29,7 @@ scripts/install_dotnet.sh $PLATFORM
 **Windows** (Command Prompt/PowerShell):
 ```cmd
 REM Auto-detect and install (Windows)
+scripts\install_git.bat
 scripts\install_nodejs.bat
 scripts\install_python.bat
 scripts\install_golang.bat
@@ -70,6 +72,11 @@ This skill provides **zero-configuration** installation on all major platforms:
 ---
 
 ## Supported Environments
+
+### Git
+- **macOS**: Homebrew
+- **Linux**: System package manager (apt/yum/pacman)
+- **Windows**: winget (Git.Git)
 
 ### Node.js
 - **macOS**: Homebrew + nvm
@@ -162,6 +169,7 @@ echo "Detected platform: $PLATFORM"
 Use the appropriate script based on the environment:
 
 ```bash
+scripts/install_git.sh $PLATFORM
 scripts/install_nodejs.sh $PLATFORM [version]
 scripts/install_python.sh $PLATFORM [version]
 scripts/install_golang.sh $PLATFORM [version]
@@ -175,6 +183,9 @@ scripts/install_dotnet.sh $PLATFORM [version]
 All scripts include automatic verification. Manual verification:
 
 ```bash
+# Git
+git --version
+
 # Node.js
 node --version && npm --version
 
@@ -357,6 +368,9 @@ sudo apt install nodejs python3 golang openjdk-21-jdk docker.io dotnet-sdk-8.0
 **Fully automated** via `.bat` scripts:
 
 ```cmd
+REM Install Git
+scripts\install_git.bat
+
 REM Install Node.js
 scripts\install_nodejs.bat
 
@@ -368,6 +382,12 @@ scripts\install_golang.bat
 
 REM Install Java
 scripts\install_java.bat
+
+REM Install Docker
+scripts\install_docker.bat
+
+REM Install .NET
+scripts\install_dotnet.bat
 ```
 
 The Windows scripts use **winget** (built-in package manager) and handle:
@@ -377,7 +397,7 @@ The Windows scripts use **winget** (built-in package manager) and handle:
 
 **Alternative**: Use Chocolatey if winget is unavailable:
 ```powershell
-choco install nodejs python golang jdk21
+choco install git nodejs python golang jdk21 docker dotnet-sdk
 ```
 
 ---
