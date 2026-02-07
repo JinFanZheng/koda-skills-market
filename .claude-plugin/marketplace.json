@@ -57,7 +57,8 @@
         "./skills/verify",
         "./skills/fx",
         "./skills/ralph",
-        "./skills/environment-installer"
+        "./skills/environment-installer",
+        "./skills/golang-best-practices"
       ]
     }
   ]
